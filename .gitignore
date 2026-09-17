@@ -1,0 +1,41 @@
+# --- credentials (never commit) ---
+kaggle.json
+.kaggle/
+*.env
+.env
+secrets*
+
+# --- environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- python caches ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- raw data is large; keep it out of Git and use scripts/download_data.py ---
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+
+# processed artifacts are regenerable
+data/processed/*
+!data/processed/.gitkeep
+
+# smoke-test outputs from the synthetic fixture (NOT real results)
+results/_smoke/
+
+# large model binaries: keep, but ignore scratch
+models/*.tmp
