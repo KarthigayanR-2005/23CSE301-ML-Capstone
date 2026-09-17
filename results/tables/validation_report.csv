@@ -41,14 +41,14 @@ clustering: 6/6 required figures,PASS,
 regression: feature engineering (rubric B3),TODO,No engineered feature registered; baseline pipeline executed.
 classification: feature engineering (rubric B3),TODO,No engineered feature registered; baseline pipeline executed.
 clustering: feature subset justification,TODO,PROVISIONAL - awaiting team justification
-regression.ipynb: all cells executed,PASS,31/31 code cells executed
-regression.ipynb: no execution errors,PASS,0 errors; 31/31 cells produced visible output
-regression.ipynb: team observation cells,TODO,13 of 14 still unwritten
-classification.ipynb: all cells executed,PASS,37/37 code cells executed
-classification.ipynb: no execution errors,PASS,0 errors; 36/37 cells produced visible output
-classification.ipynb: team observation cells,TODO,11 of 12 still unwritten
-clustering.ipynb: all cells executed,PASS,27/27 code cells executed
-clustering.ipynb: no execution errors,PASS,0 errors; 26/27 cells produced visible output
+regression.ipynb: all cells executed,PASS,47/47 code cells executed
+regression.ipynb: no execution errors,PASS,0 errors; 46/47 cells produced visible output
+regression.ipynb: team observation cells,TODO,12 of 13 still unwritten
+classification.ipynb: all cells executed,PASS,49/49 code cells executed
+classification.ipynb: no execution errors,PASS,0 errors; 48/49 cells produced visible output
+classification.ipynb: team observation cells,TODO,9 of 10 still unwritten
+clustering.ipynb: all cells executed,PASS,31/31 code cells executed
+clustering.ipynb: no execution errors,PASS,0 errors; 31/31 cells produced visible output
 clustering.ipynb: team observation cells,TODO,11 of 12 still unwritten
 regression tuning reports real outcomes,PASS,2/2 models improved on CV - reported as measured
 clustering stability labelled as NOT cross-validation,PASS,
