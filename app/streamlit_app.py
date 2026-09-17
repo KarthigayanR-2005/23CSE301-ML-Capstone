@@ -141,16 +141,16 @@ with tab3:
     t = config.TABLES_DIR / "clustering_final_metrics.csv"
     if t.exists():
         st.subheader("Cluster quality metrics")
-        st.dataframe(pd.read_csv(t), use_container_width=True)
+        st.dataframe(pd.read_csv(t), width="stretch")
     p = config.TABLES_DIR / "clustering_profile_kmeans.csv"
     if p.exists():
         st.subheader("K-Means cluster profiles (original units)")
-        st.dataframe(pd.read_csv(p), use_container_width=True)
+        st.dataframe(pd.read_csv(p), width="stretch")
     cols = st.columns(2)
     for col, fig in zip(cols, ["clu_kmeans_elbow.png", "clu_pca_kmeans.png"]):
         f = config.FIGURES_DIR / "clustering" / fig
         if f.exists():
-            col.image(str(f), use_container_width=True)
+            col.image(str(f), width="stretch")
     st.info("Cluster *names* and business interpretation are team-authored and "
             "not yet written — see `docs/team_analysis_prompts.md` Q-CL3.")
 
