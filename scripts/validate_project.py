@@ -244,11 +244,22 @@ def check_team_sections() -> None:
                    if c.cell_type == "markdown" and "TEAM TO COMPLETE" in c.source)
         unwritten = sum(1 for c in nb.cells
                         if c.cell_type == "markdown" and "(your written observation here)" in c.source)
-        executed = sum(1 for c in nb.cells if c.cell_type == "code" and c.get("outputs"))
-        total_code = sum(1 for c in nb.cells if c.cell_type == "code")
-        check(f"{nb_name}.ipynb: executed with outputs",
-              PASS if executed == total_code and total_code else FAIL,
-              f"{executed}/{total_code} code cells have output")
+        code_cells = [c for c in nb.cells if c.cell_type == "code"]
+        total_code = len(code_cells)
+        # A cell counts as executed if it has an execution_count. A cell with no
+        # output is fine (imports and assignments are silent); a cell with an
+        # ERROR output is not - that is what deliverable D1 forbids.
+        ran = sum(1 for c in code_cells if c.get("execution_count") is not None)
+        errored = sum(1 for c in code_cells
+                      if any(o.get("output_type") == "error" for o in c.get("outputs", [])))
+        with_output = sum(1 for c in code_cells if c.get("outputs"))
+        check(f"{nb_name}.ipynb: all cells executed",
+              PASS if ran == total_code and total_code else FAIL,
+              f"{ran}/{total_code} code cells executed")
+        check(f"{nb_name}.ipynb: no execution errors",
+              PASS if errored == 0 else FAIL,
+              f"{errored} cells raised" if errored else
+              f"0 errors; {with_output}/{total_code} cells produced visible output")
         check(f"{nb_name}.ipynb: team observation cells",
               TODO if unwritten else PASS,
               f"{unwritten} of {todo} still unwritten")

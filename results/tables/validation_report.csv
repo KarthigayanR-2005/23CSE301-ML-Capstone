@@ -1,0 +1,55 @@
+check,status,detail
+required files present,PASS,all present
+regression: raw shape,PASS,"(10000, 6) (expected (10000, 6))"
+regression: prepared columns in 6-9 range,PASS,6 columns
+regression: prepared rows >= 10000,PASS,10000 rows
+classification: raw shape,PASS,"(10000, 10) (expected (10000, 10))"
+classification: prepared columns in 6-9 range,PASS,7 columns
+classification: prepared rows >= 10000,PASS,10000 rows
+clustering: raw shape,PASS,"(10127, 23) (expected (10127, 23))"
+clustering: prepared columns in 6-9 range,PASS,7 columns
+clustering: prepared rows >= 10000,PASS,10127 rows
+classification: Failure Type excluded (target leakage),PASS,excluded
+classification: identifiers excluded,PASS,
+clustering: Attrition_Flag and CLIENTNUM withheld from fitting frame,PASS,
+clustering: Naive_Bayes_Classifier columns excluded,PASS,
+regression: 10 algorithms,PASS,10
+classification: 5 Part-A + 5 Part-B,PASS,A=5 B=5
+classification: Naive Bayes variant is Gaussian,PASS,
+classification: Bagging base estimator is a Decision Tree,PASS,
+every model is a Pipeline (transformers refit per CV fold),PASS,
+every pipeline carries its own preprocessing step,PASS,
+regression: 10 rows in comparison table,PASS,10 rows
+regression: ranked by test R2 descending,PASS,
+regression: R2 column present,PASS,
+regression: RMSE column present,PASS,
+regression: MAE column present,PASS,
+regression: stored R2 reproduces exactly,PASS,stored=0.98898329 recomputed=0.98898329
+classification: 10 rows in consolidated table,PASS,10 rows
+classification: Accuracy present,PASS,
+classification: Precision_failure present,PASS,
+classification: Recall_failure present,PASS,
+classification: F1_weighted present,PASS,
+classification: ROC_AUC present,PASS,
+"classification: ROC-AUC from scores, not hard labels",PASS,
+classification: no NaN ROC-AUC,PASS,
+regression: reloaded pipeline predicts identically,PASS,50 rows predicted from RAW-shaped input
+classification: reloaded pipeline predicts identically,PASS,50 rows predicted from RAW-shaped input
+regression: 7/7 required figures,PASS,
+classification: 9/9 required figures,PASS,
+clustering: 6/6 required figures,PASS,
+regression: feature engineering (rubric B3),TODO,No engineered feature registered; baseline pipeline executed.
+classification: feature engineering (rubric B3),TODO,No engineered feature registered; baseline pipeline executed.
+clustering: feature subset justification,TODO,PROVISIONAL - awaiting team justification
+regression.ipynb: all cells executed,PASS,31/31 code cells executed
+regression.ipynb: no execution errors,PASS,0 errors; 31/31 cells produced visible output
+regression.ipynb: team observation cells,TODO,13 of 14 still unwritten
+classification.ipynb: all cells executed,PASS,37/37 code cells executed
+classification.ipynb: no execution errors,PASS,0 errors; 36/37 cells produced visible output
+classification.ipynb: team observation cells,TODO,11 of 12 still unwritten
+clustering.ipynb: all cells executed,PASS,27/27 code cells executed
+clustering.ipynb: no execution errors,PASS,0 errors; 26/27 cells produced visible output
+clustering.ipynb: team observation cells,TODO,11 of 12 still unwritten
+regression tuning reports real outcomes,PASS,2/2 models improved on CV - reported as measured
+clustering stability labelled as NOT cross-validation,PASS,
+clustering silhouette exactness recorded,PASS,exact=True
