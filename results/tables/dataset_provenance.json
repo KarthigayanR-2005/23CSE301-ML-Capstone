@@ -1,0 +1,32 @@
+{
+  "regression": {
+    "track": "regression",
+    "filename": "Student_Performance.csv",
+    "source_url": "https://www.kaggle.com/datasets/nikhil7280/student-performance-multiple-linear-regression",
+    "retrieved_on": "2026-09-17",
+    "sha256": "93793b00d9026d0b4907df0ca9f88b3696747c7496679d35833bb0fbf9fb57cf",
+    "size_bytes": 175071,
+    "raw_rows": 10000,
+    "raw_cols": 6
+  },
+  "classification": {
+    "track": "classification",
+    "filename": "predictive_maintenance.csv",
+    "source_url": "https://www.kaggle.com/datasets/shivamb/machine-predictive-maintenance-classification",
+    "retrieved_on": "2026-09-17",
+    "sha256": "9f0ede0b6fc33edacccfa1924e6430f92bd33ecce6e895543cd228c3a55ff10b",
+    "size_bytes": 531014,
+    "raw_rows": 10000,
+    "raw_cols": 10
+  },
+  "clustering": {
+    "track": "clustering",
+    "filename": "BankChurners.csv",
+    "source_url": "https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers",
+    "retrieved_on": "2026-09-17",
+    "sha256": "c91b525a2a6755a1b0b80dad1d0d008ca97ec4df34552c8f47ffa12b6184b779",
+    "size_bytes": 1510880,
+    "raw_rows": 10127,
+    "raw_cols": 23
+  }
+}

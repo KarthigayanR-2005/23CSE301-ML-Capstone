@@ -1,0 +1,4 @@
+|    | algorithm            |   k |   n_clusters |   Silhouette |   Davies_Bouldin |   Calinski_Harabasz | silhouette_exact   | silhouette_sample_size   |
+|---:|:---------------------|----:|-------------:|-------------:|-----------------:|--------------------:|:-------------------|:-------------------------|
+|  0 | K-Means              |   5 |            5 |     0.197521 |          1.43039 |             2373.38 | True               | full dataset             |
+|  1 | Agglomerative (ward) |   5 |            5 |     0.161177 |          1.64372 |             1944.08 | True               | full dataset             |

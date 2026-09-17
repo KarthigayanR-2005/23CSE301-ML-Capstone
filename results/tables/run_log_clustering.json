@@ -1,0 +1,56 @@
+{
+  "mode": "full",
+  "track": "clustering",
+  "elapsed_seconds": 142.8,
+  "finished": "2026-09-17T05:48:21",
+  "log": [
+    {
+      "time": "2026-09-17T05:45:59",
+      "step": "clustering.audit",
+      "status": "EXECUTED",
+      "detail": "raw=(10127, 23) prepared=(10127, 7); Attrition_Flag withheld"
+    },
+    {
+      "time": "2026-09-17T05:46:00",
+      "step": "clustering.memory",
+      "status": "EXECUTED",
+      "detail": "pairwise=0.764GB feasible=True silhouette_sample=full"
+    },
+    {
+      "time": "2026-09-17T05:46:12",
+      "step": "clustering.kmeans",
+      "status": "EXECUTED",
+      "detail": "k sweep [2, 3, 4, 5, 6, 7, 8, 9, 10]; elbow k=5, best-silhouette k=2"
+    },
+    {
+      "time": "2026-09-17T05:46:54",
+      "step": "clustering.agglomerative",
+      "status": "EXECUTED",
+      "detail": "linkages compared=['ward', 'complete', 'average', 'single']; best by silhouette=average"
+    },
+    {
+      "time": "2026-09-17T05:47:17",
+      "step": "clustering.visualisation",
+      "status": "EXECUTED",
+      "detail": "PCA for both algorithms; t-SNE for K-Means (SAMPLED: 3000 of 10127 rows (visualisation only))"
+    },
+    {
+      "time": "2026-09-17T05:48:21",
+      "step": "clustering.stability",
+      "status": "EXECUTED",
+      "detail": "SUPPLEMENTARY resampling ARI - does not satisfy the rubric's CV wording"
+    },
+    {
+      "time": "2026-09-17T05:48:21",
+      "step": "clustering.posthoc",
+      "status": "EXECUTED",
+      "detail": "Attrition_Flag crosstab computed after fitting"
+    },
+    {
+      "time": "2026-09-17T05:48:21",
+      "step": "clustering.persist",
+      "status": "EXECUTED",
+      "detail": "saved scaler + kmeans + labels"
+    }
+  ]
+}

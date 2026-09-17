@@ -1,0 +1,56 @@
+{
+  "mode": "dev",
+  "track": "regression",
+  "elapsed_seconds": 39.0,
+  "finished": "2026-09-17T05:32:19",
+  "log": [
+    {
+      "time": "2026-09-17T05:31:41",
+      "step": "regression.audit",
+      "status": "EXECUTED",
+      "detail": "raw=(10000, 6) dups=127 missing=0"
+    },
+    {
+      "time": "2026-09-17T05:31:42",
+      "step": "regression.eda",
+      "status": "EXECUTED",
+      "detail": "scatter features=['Previous Scores', 'Hours Studied']"
+    },
+    {
+      "time": "2026-09-17T05:31:42",
+      "step": "regression.split",
+      "status": "EXECUTED",
+      "detail": "{'test_rows': 2000, 'test_rows_also_in_train': 258, 'pct': 12.9}"
+    },
+    {
+      "time": "2026-09-17T05:31:52",
+      "step": "regression.models",
+      "status": "EXECUTED",
+      "detail": "10 models fitted"
+    },
+    {
+      "time": "2026-09-17T05:32:17",
+      "step": "regression.cv",
+      "status": "EXECUTED",
+      "detail": "5-fold CV R2; leaders=['1. Linear Regression', '2. Ridge Regression']"
+    },
+    {
+      "time": "2026-09-17T05:32:19",
+      "step": "regression.tuning",
+      "status": "EXECUTED",
+      "detail": "GridSearchCV on 2 models; 2/2 improved on CV"
+    },
+    {
+      "time": "2026-09-17T05:32:19",
+      "step": "regression.algorithm_notes",
+      "status": "EXECUTED",
+      "detail": "coefficients, lasso sparsity (0 zeroed), poly degrees (1, 2)"
+    },
+    {
+      "time": "2026-09-17T05:32:19",
+      "step": "regression.figures",
+      "status": "EXECUTED",
+      "detail": "best=5. Polynomial (deg 2) + Linear"
+    }
+  ]
+}

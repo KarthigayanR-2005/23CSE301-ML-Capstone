@@ -1,0 +1,278 @@
+{
+  "track": "clustering",
+  "mode": "full",
+  "raw_shape": [
+    10127,
+    23
+  ],
+  "feature_subset_status": "PROVISIONAL - awaiting team justification",
+  "prepared_shape": [
+    10127,
+    7
+  ],
+  "scaled_shape": [
+    10127,
+    7
+  ],
+  "fitted_on": "full standardised feature space (7 features) - NOT on PCA components; PCA/t-SNE are used for visualisation only",
+  "memory_probe": {
+    "n_rows": 10127,
+    "pairwise_matrix_GB": 0.764,
+    "available_RAM_GB": 3.38,
+    "feasible": true,
+    "note": "scipy/sklearn need roughly 2-3x the bare matrix during linkage"
+  },
+  "k_elbow_suggestion": 5,
+  "k_best_silhouette": 2,
+  "k_used": 5,
+  "k_selection_note": "k chosen numerically from the elbow of the inertia curve; TEAM TO CONFIRM - see Q-CL2.",
+  "linkage_comparison": [
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "ward",
+      "k": 5,
+      "Silhouette": 0.1611765316427913,
+      "Davies_Bouldin": 1.643720168558508,
+      "Calinski_Harabasz": 1944.0839690422,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "complete",
+      "k": 5,
+      "Silhouette": 0.13767922127019097,
+      "Davies_Bouldin": 1.9234454647153651,
+      "Calinski_Harabasz": 1492.7638064270259,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "average",
+      "k": 5,
+      "Silhouette": 0.1618543757458218,
+      "Davies_Bouldin": 1.179905947176497,
+      "Calinski_Harabasz": 965.9562342691221,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "single",
+      "k": 5,
+      "Silhouette": 0.13785150406110747,
+      "Davies_Bouldin": 0.6151734188231396,
+      "Calinski_Harabasz": 3.7288559726843196,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    }
+  ],
+  "best_linkage_by_silhouette": "average",
+  "final_metrics": [
+    {
+      "algorithm": "K-Means",
+      "k": 5,
+      "n_clusters": 5,
+      "Silhouette": 0.197520510744845,
+      "Davies_Bouldin": 1.43038776806531,
+      "Calinski_Harabasz": 2373.384374182653,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative (ward)",
+      "k": 5,
+      "n_clusters": 5,
+      "Silhouette": 0.1611765316427913,
+      "Davies_Bouldin": 1.643720168558508,
+      "Calinski_Harabasz": 1944.0839690422,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    }
+  ],
+  "pca_explained_variance_ratio": [
+    0.29646313073159064,
+    0.25328153333633396
+  ],
+  "tsne_note": "SAMPLED: 3000 of 10127 rows (visualisation only)",
+  "stability": [
+    {
+      "algorithm": "kmeans",
+      "k": 5,
+      "n_repeats_completed": 20,
+      "subsample_frac": 0.8,
+      "mean_ARI": 0.8668837149289882,
+      "std_ARI": 0.12977181936196294,
+      "min_ARI": 0.6275434273095722,
+      "interpretation_status": "SUPPLEMENTARY - not supervised cross-validation"
+    },
+    {
+      "algorithm": "agglomerative",
+      "k": 5,
+      "n_repeats_completed": 20,
+      "subsample_frac": 0.8,
+      "mean_ARI": 0.30655916803454664,
+      "std_ARI": 0.05862590330980309,
+      "min_ARI": 0.2013236958743043,
+      "interpretation_status": "SUPPLEMENTARY - not supervised cross-validation"
+    }
+  ],
+  "profile_kmeans": [
+    {
+      "cluster": 0,
+      "n_members": 1219,
+      "pct_of_data": 12.04,
+      "Customer_Age": 46.267,
+      "Months_on_book": 35.876,
+      "Total_Relationship_Count": 3.97,
+      "Credit_Limit": 26920.16,
+      "Total_Trans_Amt": 3514.607,
+      "Total_Trans_Ct": 58.625,
+      "Avg_Utilization_Ratio": 0.044
+    },
+    {
+      "cluster": 1,
+      "n_members": 2701,
+      "pct_of_data": 26.67,
+      "Customer_Age": 38.516,
+      "Months_on_book": 28.696,
+      "Total_Relationship_Count": 4.248,
+      "Credit_Limit": 5788.735,
+      "Total_Trans_Amt": 3219.945,
+      "Total_Trans_Ct": 58.766,
+      "Avg_Utilization_Ratio": 0.212
+    },
+    {
+      "cluster": 2,
+      "n_members": 2726,
+      "pct_of_data": 26.92,
+      "Customer_Age": 53.445,
+      "Months_on_book": 42.558,
+      "Total_Relationship_Count": 3.982,
+      "Credit_Limit": 6323.555,
+      "Total_Trans_Amt": 3002.979,
+      "Total_Trans_Ct": 54.193,
+      "Avg_Utilization_Ratio": 0.163
+    },
+    {
+      "cluster": 3,
+      "n_members": 1102,
+      "pct_of_data": 10.88,
+      "Customer_Age": 45.371,
+      "Months_on_book": 35.213,
+      "Total_Relationship_Count": 2.129,
+      "Credit_Limit": 13889.142,
+      "Total_Trans_Amt": 12570.282,
+      "Total_Trans_Ct": 103.865,
+      "Avg_Utilization_Ratio": 0.166
+    },
+    {
+      "cluster": 4,
+      "n_members": 2379,
+      "pct_of_data": 23.49,
+      "Customer_Age": 47.508,
+      "Months_on_book": 36.902,
+      "Total_Relationship_Count": 3.823,
+      "Credit_Limit": 2698.992,
+      "Total_Trans_Amt": 4027.0,
+      "Total_Trans_Ct": 69.123,
+      "Avg_Utilization_Ratio": 0.643
+    }
+  ],
+  "profile_agglomerative": [
+    {
+      "cluster": 0,
+      "n_members": 2970,
+      "pct_of_data": 29.33,
+      "Customer_Age": 50.043,
+      "Months_on_book": 39.271,
+      "Total_Relationship_Count": 3.316,
+      "Credit_Limit": 6822.143,
+      "Total_Trans_Amt": 3836.906,
+      "Total_Trans_Ct": 62.397,
+      "Avg_Utilization_Ratio": 0.109
+    },
+    {
+      "cluster": 1,
+      "n_members": 2445,
+      "pct_of_data": 24.14,
+      "Customer_Age": 49.699,
+      "Months_on_book": 38.986,
+      "Total_Relationship_Count": 3.888,
+      "Credit_Limit": 2790.342,
+      "Total_Trans_Amt": 3993.621,
+      "Total_Trans_Ct": 68.271,
+      "Avg_Utilization_Ratio": 0.611
+    },
+    {
+      "cluster": 2,
+      "n_members": 2794,
+      "pct_of_data": 27.59,
+      "Customer_Age": 39.431,
+      "Months_on_book": 29.526,
+      "Total_Relationship_Count": 4.666,
+      "Credit_Limit": 6384.16,
+      "Total_Trans_Amt": 2996.449,
+      "Total_Trans_Ct": 55.599,
+      "Avg_Utilization_Ratio": 0.278
+    },
+    {
+      "cluster": 3,
+      "n_members": 747,
+      "pct_of_data": 7.38,
+      "Customer_Age": 45.102,
+      "Months_on_book": 35.012,
+      "Total_Relationship_Count": 2.357,
+      "Credit_Limit": 14053.798,
+      "Total_Trans_Amt": 14698.396,
+      "Total_Trans_Ct": 110.336,
+      "Avg_Utilization_Ratio": 0.18
+    },
+    {
+      "cluster": 4,
+      "n_members": 1171,
+      "pct_of_data": 11.56,
+      "Customer_Age": 47.088,
+      "Months_on_book": 36.927,
+      "Total_Relationship_Count": 3.806,
+      "Credit_Limit": 27323.754,
+      "Total_Trans_Amt": 3491.362,
+      "Total_Trans_Ct": 57.061,
+      "Avg_Utilization_Ratio": 0.047
+    }
+  ],
+  "posthoc_attrition_crosstab": [
+    {
+      "cluster": 0,
+      "Attrited Customer": 216,
+      "Existing Customer": 1003,
+      "row_pct_attrited": 17.72
+    },
+    {
+      "cluster": 1,
+      "Attrited Customer": 514,
+      "Existing Customer": 2187,
+      "row_pct_attrited": 19.03
+    },
+    {
+      "cluster": 2,
+      "Attrited Customer": 653,
+      "Existing Customer": 2073,
+      "row_pct_attrited": 23.95
+    },
+    {
+      "cluster": 3,
+      "Attrited Customer": 50,
+      "Existing Customer": 1052,
+      "row_pct_attrited": 4.54
+    },
+    {
+      "cluster": 4,
+      "Attrited Customer": 194,
+      "Existing Customer": 2185,
+      "row_pct_attrited": 8.15
+    }
+  ],
+  "posthoc_note": "Attrition_Flag was withheld from every fitting decision and is cross-tabulated only after k and the models were fixed. Clusters are NOT required to align with churn."
+}

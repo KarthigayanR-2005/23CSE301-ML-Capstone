@@ -1,0 +1,218 @@
+{
+  "track": "clustering",
+  "mode": "dev",
+  "raw_shape": [
+    10127,
+    23
+  ],
+  "feature_subset_status": "PROVISIONAL - awaiting team justification",
+  "prepared_shape": [
+    10127,
+    7
+  ],
+  "scaled_shape": [
+    10127,
+    7
+  ],
+  "fitted_on": "full standardised feature space (7 features) - NOT on PCA components; PCA/t-SNE are used for visualisation only",
+  "memory_probe": {
+    "n_rows": 10127,
+    "pairwise_matrix_GB": 0.764,
+    "available_RAM_GB": 3.38,
+    "feasible": true,
+    "note": "scipy/sklearn need roughly 2-3x the bare matrix during linkage"
+  },
+  "k_elbow_suggestion": 3,
+  "k_best_silhouette": 2,
+  "k_used": 3,
+  "k_selection_note": "k chosen numerically from the elbow of the inertia curve; TEAM TO CONFIRM - see Q-CL2.",
+  "linkage_comparison": [
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "ward",
+      "k": 3,
+      "Silhouette": 0.14844065553362162,
+      "Davies_Bouldin": 1.93102107096216,
+      "Calinski_Harabasz": 1888.8848747989828,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "complete",
+      "k": 3,
+      "Silhouette": 0.13619690901270184,
+      "Davies_Bouldin": 1.927511376848498,
+      "Calinski_Harabasz": 1853.57530611978,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "average",
+      "k": 3,
+      "Silhouette": 0.2525541842986125,
+      "Davies_Bouldin": 1.2788952222624836,
+      "Calinski_Harabasz": 1670.854313634901,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative",
+      "linkage": "single",
+      "k": 3,
+      "Silhouette": 0.2250102758107535,
+      "Davies_Bouldin": 0.6647753467161517,
+      "Calinski_Harabasz": 4.208810030624006,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    }
+  ],
+  "best_linkage_by_silhouette": "average",
+  "final_metrics": [
+    {
+      "algorithm": "K-Means",
+      "k": 3,
+      "n_clusters": 3,
+      "Silhouette": 0.1875000448065324,
+      "Davies_Bouldin": 1.6769135938710562,
+      "Calinski_Harabasz": 2519.564092611412,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    },
+    {
+      "algorithm": "Agglomerative (ward)",
+      "k": 3,
+      "n_clusters": 3,
+      "Silhouette": 0.14844065553362162,
+      "Davies_Bouldin": 1.93102107096216,
+      "Calinski_Harabasz": 1888.8848747989828,
+      "silhouette_exact": true,
+      "silhouette_sample_size": "full dataset"
+    }
+  ],
+  "pca_explained_variance_ratio": [
+    0.29646313073159064,
+    0.25328153333633396
+  ],
+  "tsne_note": "SAMPLED: 800 of 10127 rows (visualisation only)",
+  "stability": [
+    {
+      "algorithm": "kmeans",
+      "k": 3,
+      "n_repeats_completed": 5,
+      "subsample_frac": 0.8,
+      "mean_ARI": 0.8773281265966476,
+      "std_ARI": 0.09073291434587347,
+      "min_ARI": 0.7442485117841517,
+      "interpretation_status": "SUPPLEMENTARY - not supervised cross-validation"
+    },
+    {
+      "algorithm": "agglomerative",
+      "k": 3,
+      "n_repeats_completed": 5,
+      "subsample_frac": 0.8,
+      "mean_ARI": 0.1894797457911001,
+      "std_ARI": 0.0407849249583153,
+      "min_ARI": 0.13608646688411974,
+      "interpretation_status": "SUPPLEMENTARY - not supervised cross-validation"
+    }
+  ],
+  "profile_kmeans": [
+    {
+      "cluster": 0,
+      "n_members": 4347,
+      "pct_of_data": 42.92,
+      "Customer_Age": 40.035,
+      "Months_on_book": 30.312,
+      "Total_Relationship_Count": 4.135,
+      "Credit_Limit": 6759.257,
+      "Total_Trans_Amt": 3431.079,
+      "Total_Trans_Ct": 61.942,
+      "Avg_Utilization_Ratio": 0.319
+    },
+    {
+      "cluster": 1,
+      "n_members": 1317,
+      "pct_of_data": 13.0,
+      "Customer_Age": 45.516,
+      "Months_on_book": 35.309,
+      "Total_Relationship_Count": 2.139,
+      "Credit_Limit": 15715.74,
+      "Total_Trans_Amt": 11738.011,
+      "Total_Trans_Ct": 100.032,
+      "Avg_Utilization_Ratio": 0.16
+    },
+    {
+      "cluster": 2,
+      "n_members": 4463,
+      "pct_of_data": 44.07,
+      "Customer_Age": 52.692,
+      "Months_on_book": 41.581,
+      "Total_Relationship_Count": 3.992,
+      "Credit_Limit": 8365.601,
+      "Total_Trans_Amt": 3187.614,
+      "Total_Trans_Ct": 57.32,
+      "Avg_Utilization_Ratio": 0.266
+    }
+  ],
+  "profile_agglomerative": [
+    {
+      "cluster": 0,
+      "n_members": 5239,
+      "pct_of_data": 51.73,
+      "Customer_Age": 44.223,
+      "Months_on_book": 33.941,
+      "Total_Relationship_Count": 4.303,
+      "Credit_Limit": 4706.953,
+      "Total_Trans_Amt": 3461.822,
+      "Total_Trans_Ct": 61.513,
+      "Avg_Utilization_Ratio": 0.434
+    },
+    {
+      "cluster": 1,
+      "n_members": 747,
+      "pct_of_data": 7.38,
+      "Customer_Age": 45.102,
+      "Months_on_book": 35.012,
+      "Total_Relationship_Count": 2.357,
+      "Credit_Limit": 14053.798,
+      "Total_Trans_Amt": 14698.396,
+      "Total_Trans_Ct": 110.336,
+      "Avg_Utilization_Ratio": 0.18
+    },
+    {
+      "cluster": 2,
+      "n_members": 4141,
+      "pct_of_data": 40.89,
+      "Customer_Age": 49.207,
+      "Months_on_book": 38.608,
+      "Total_Relationship_Count": 3.454,
+      "Credit_Limit": 12619.628,
+      "Total_Trans_Amt": 3739.193,
+      "Total_Trans_Ct": 60.888,
+      "Avg_Utilization_Ratio": 0.091
+    }
+  ],
+  "posthoc_attrition_crosstab": [
+    {
+      "cluster": 0,
+      "Attrited Customer": 658,
+      "Existing Customer": 3689,
+      "row_pct_attrited": 15.14
+    },
+    {
+      "cluster": 1,
+      "Attrited Customer": 120,
+      "Existing Customer": 1197,
+      "row_pct_attrited": 9.11
+    },
+    {
+      "cluster": 2,
+      "Attrited Customer": 849,
+      "Existing Customer": 3614,
+      "row_pct_attrited": 19.02
+    }
+  ],
+  "posthoc_note": "Attrition_Flag was withheld from every fitting decision and is cross-tabulated only after k and the models were fixed. Clusters are NOT required to align with churn."
+}

@@ -1,0 +1,348 @@
+{
+  "track": "classification",
+  "mode": "dev",
+  "part": "all",
+  "raw_shape": [
+    10000,
+    10
+  ],
+  "target_distribution_raw": {
+    "0": 9661,
+    "1": 339
+  },
+  "leakage_columns_excluded": [
+    "Failure Type"
+  ],
+  "prepared_shape": [
+    10000,
+    7
+  ],
+  "split": {
+    "train": [
+      8000,
+      6
+    ],
+    "test": [
+      2000,
+      6
+    ],
+    "stratified": true
+  },
+  "row_overlap": {
+    "test_rows": 2000,
+    "test_rows_also_in_train": 0,
+    "pct": 0.0
+  },
+  "feature_engineering": {
+    "track": "classification",
+    "state": "AWAITING TEAM INPUT",
+    "rubric_B3": "INCOMPLETE",
+    "detail": "No engineered feature registered; baseline pipeline executed."
+  },
+  "majority_baseline": {
+    "majority_class": 0,
+    "baseline_accuracy": 0.966,
+    "baseline_f1_weighted": 0.949293997965412,
+    "test_class_counts": {
+      "0": 1932,
+      "1": 68
+    }
+  },
+  "partA_table": [
+    {
+      "Model": "A4. Decision Tree Classifier",
+      "Accuracy": 0.9755,
+      "Precision_failure": 0.7878787878787878,
+      "Recall_failure": 0.38235294117647056,
+      "F1_weighted": 0.9713649145884067,
+      "F1_failure": 0.5148514851485149,
+      "ROC_AUC": 0.9218540677140421,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.026
+    },
+    {
+      "Model": "A2. K-Nearest Neighbors",
+      "Accuracy": 0.974,
+      "Precision_failure": 0.8333333333333334,
+      "Recall_failure": 0.29411764705882354,
+      "F1_weighted": 0.9679289751234925,
+      "F1_failure": 0.43478260869565216,
+      "ROC_AUC": 0.8290859822189744,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.018
+    },
+    {
+      "Model": "A5. Support Vector Classifier",
+      "Accuracy": 0.972,
+      "Precision_failure": 0.875,
+      "Recall_failure": 0.20588235294117646,
+      "F1_weighted": 0.9635192373169902,
+      "F1_failure": 0.3333333333333333,
+      "ROC_AUC": 0.9468167701863354,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.779
+    },
+    {
+      "Model": "A1. Logistic Regression",
+      "Accuracy": 0.9675,
+      "Precision_failure": 0.6363636363636364,
+      "Recall_failure": 0.10294117647058823,
+      "F1_weighted": 0.9560115444587566,
+      "F1_failure": 0.17721518987341772,
+      "ROC_AUC": 0.8993880160759956,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.021
+    },
+    {
+      "Model": "A3. Gaussian Naive Bayes",
+      "Accuracy": 0.958,
+      "Precision_failure": 0.25,
+      "Recall_failure": 0.11764705882352941,
+      "F1_weighted": 0.9506338461538462,
+      "F1_failure": 0.16,
+      "ROC_AUC": 0.8468137254901961,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.014
+    }
+  ],
+  "partB_table": [
+    {
+      "Model": "B9. Bagging (Decision Tree base)",
+      "Accuracy": 0.9865,
+      "Precision_failure": 0.8596491228070176,
+      "Recall_failure": 0.7205882352941176,
+      "F1_weighted": 0.9859251612903225,
+      "F1_failure": 0.784,
+      "ROC_AUC": 0.9598176227012545,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 1.724
+    },
+    {
+      "Model": "B8. Gradient Boosting Classifier",
+      "Accuracy": 0.986,
+      "Precision_failure": 0.8448275862068966,
+      "Recall_failure": 0.7205882352941176,
+      "F1_weighted": 0.9854625136235875,
+      "F1_failure": 0.7777777777777778,
+      "ROC_AUC": 0.9672923517232981,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 1.618
+    },
+    {
+      "Model": "B10. MLP Classifier",
+      "Accuracy": 0.981,
+      "Precision_failure": 0.734375,
+      "Recall_failure": 0.6911764705882353,
+      "F1_weighted": 0.9807219454106735,
+      "F1_failure": 0.7121212121212122,
+      "ROC_AUC": 0.9789002557544757,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 3.087
+    },
+    {
+      "Model": "B6. Random Forest Classifier",
+      "Accuracy": 0.9815,
+      "Precision_failure": 0.8974358974358975,
+      "Recall_failure": 0.5147058823529411,
+      "F1_weighted": 0.9790618963824359,
+      "F1_failure": 0.6542056074766355,
+      "ROC_AUC": 0.9708660638168312,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 1.721
+    },
+    {
+      "Model": "B7. AdaBoost Classifier",
+      "Accuracy": 0.9725,
+      "Precision_failure": 0.7407407407407407,
+      "Recall_failure": 0.29411764705882354,
+      "F1_weighted": 0.9667101556708673,
+      "F1_failure": 0.42105263157894735,
+      "ROC_AUC": 0.9491687979539642,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.864
+    }
+  ],
+  "all10_table": [
+    {
+      "Model": "B9. Bagging (Decision Tree base)",
+      "Accuracy": 0.9865,
+      "Precision_failure": 0.8596491228070176,
+      "Recall_failure": 0.7205882352941176,
+      "F1_weighted": 0.9859251612903225,
+      "F1_failure": 0.784,
+      "ROC_AUC": 0.9598176227012545,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 1.724
+    },
+    {
+      "Model": "B8. Gradient Boosting Classifier",
+      "Accuracy": 0.986,
+      "Precision_failure": 0.8448275862068966,
+      "Recall_failure": 0.7205882352941176,
+      "F1_weighted": 0.9854625136235875,
+      "F1_failure": 0.7777777777777778,
+      "ROC_AUC": 0.9672923517232981,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 1.618
+    },
+    {
+      "Model": "B10. MLP Classifier",
+      "Accuracy": 0.981,
+      "Precision_failure": 0.734375,
+      "Recall_failure": 0.6911764705882353,
+      "F1_weighted": 0.9807219454106735,
+      "F1_failure": 0.7121212121212122,
+      "ROC_AUC": 0.9789002557544757,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 3.087
+    },
+    {
+      "Model": "B6. Random Forest Classifier",
+      "Accuracy": 0.9815,
+      "Precision_failure": 0.8974358974358975,
+      "Recall_failure": 0.5147058823529411,
+      "F1_weighted": 0.9790618963824359,
+      "F1_failure": 0.6542056074766355,
+      "ROC_AUC": 0.9708660638168312,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 1.721
+    },
+    {
+      "Model": "A4. Decision Tree Classifier",
+      "Accuracy": 0.9755,
+      "Precision_failure": 0.7878787878787878,
+      "Recall_failure": 0.38235294117647056,
+      "F1_weighted": 0.9713649145884067,
+      "F1_failure": 0.5148514851485149,
+      "ROC_AUC": 0.9218540677140421,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.026
+    },
+    {
+      "Model": "A2. K-Nearest Neighbors",
+      "Accuracy": 0.974,
+      "Precision_failure": 0.8333333333333334,
+      "Recall_failure": 0.29411764705882354,
+      "F1_weighted": 0.9679289751234925,
+      "F1_failure": 0.43478260869565216,
+      "ROC_AUC": 0.8290859822189744,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.018
+    },
+    {
+      "Model": "B7. AdaBoost Classifier",
+      "Accuracy": 0.9725,
+      "Precision_failure": 0.7407407407407407,
+      "Recall_failure": 0.29411764705882354,
+      "F1_weighted": 0.9667101556708673,
+      "F1_failure": 0.42105263157894735,
+      "ROC_AUC": 0.9491687979539642,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.864
+    },
+    {
+      "Model": "A5. Support Vector Classifier",
+      "Accuracy": 0.972,
+      "Precision_failure": 0.875,
+      "Recall_failure": 0.20588235294117646,
+      "F1_weighted": 0.9635192373169902,
+      "F1_failure": 0.3333333333333333,
+      "ROC_AUC": 0.9468167701863354,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.779
+    },
+    {
+      "Model": "A1. Logistic Regression",
+      "Accuracy": 0.9675,
+      "Precision_failure": 0.6363636363636364,
+      "Recall_failure": 0.10294117647058823,
+      "F1_weighted": 0.9560115444587566,
+      "F1_failure": 0.17721518987341772,
+      "ROC_AUC": 0.8993880160759956,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.021
+    },
+    {
+      "Model": "A3. Gaussian Naive Bayes",
+      "Accuracy": 0.958,
+      "Precision_failure": 0.25,
+      "Recall_failure": 0.11764705882352941,
+      "F1_weighted": 0.9506338461538462,
+      "F1_failure": 0.16,
+      "ROC_AUC": 0.8468137254901961,
+      "AUC_source": "predict_proba",
+      "Fit_seconds": 0.014
+    }
+  ],
+  "cv_selected_leaders": [
+    "B9. Bagging (Decision Tree base)",
+    "B10. MLP Classifier"
+  ],
+  "tuning": [
+    {
+      "Model": "B9. Bagging (Decision Tree base)",
+      "best_params": "{\"model__max_samples\": 0.8, \"model__n_estimators\": 100}",
+      "CV_F1w_before": 0.98512,
+      "CV_F1w_after": 0.98526,
+      "CV_delta": 0.00013,
+      "HeldOut_F1w_before": 0.98593,
+      "HeldOut_F1w_after": 0.98754,
+      "HeldOut_Recall_failure_before": 0.72059,
+      "HeldOut_Recall_failure_after": 0.75,
+      "HeldOut_ROC_AUC_before": 0.95982,
+      "HeldOut_ROC_AUC_after": 0.95967,
+      "improved_on_CV": true
+    },
+    {
+      "Model": "B10. MLP Classifier",
+      "best_params": "{\"model__activation\": \"relu\", \"model__hidden_layer_sizes\": [64, 32]}",
+      "CV_F1w_before": 0.98301,
+      "CV_F1w_after": 0.98301,
+      "CV_delta": 0.0,
+      "HeldOut_F1w_before": 0.98072,
+      "HeldOut_F1w_after": 0.98072,
+      "HeldOut_Recall_failure_before": 0.69118,
+      "HeldOut_Recall_failure_after": 0.69118,
+      "HeldOut_ROC_AUC_before": 0.9789,
+      "HeldOut_ROC_AUC_after": 0.9789,
+      "improved_on_CV": false
+    }
+  ],
+  "knn_distance_metrics": [
+    {
+      "distance_metric": "euclidean",
+      "Accuracy": 0.974,
+      "Precision_failure": 0.8333333333333334,
+      "Recall_failure": 0.29411764705882354,
+      "F1_weighted": 0.9679289751234925,
+      "ROC_AUC": 0.8290859822189744
+    },
+    {
+      "distance_metric": "manhattan",
+      "Accuracy": 0.9735,
+      "Precision_failure": 0.8260869565217391,
+      "Recall_failure": 0.27941176470588236,
+      "F1_weighted": 0.9671003348148397,
+      "ROC_AUC": 0.8297558153696262
+    },
+    {
+      "distance_metric": "chebyshev",
+      "Accuracy": 0.971,
+      "Precision_failure": 0.7777777777777778,
+      "Recall_failure": 0.20588235294117646,
+      "F1_weighted": 0.9627549999405829,
+      "ROC_AUC": 0.804016715381805
+    }
+  ],
+  "rf_importances": {
+    "Torque [Nm]": 0.31836,
+    "Rotational speed [rpm]": 0.23551,
+    "Tool wear [min]": 0.16677,
+    "Air temperature [K]": 0.13026,
+    "Process temperature [K]": 0.12458,
+    "Type_L": 0.01077,
+    "Type_M": 0.00857,
+    "Type_H": 0.00517
+  },
+  "best_model_heldout": "B9. Bagging (Decision Tree base)"
+}

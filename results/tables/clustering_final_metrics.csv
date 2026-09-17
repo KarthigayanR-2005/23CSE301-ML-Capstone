@@ -1,0 +1,3 @@
+,algorithm,k,n_clusters,Silhouette,Davies_Bouldin,Calinski_Harabasz,silhouette_exact,silhouette_sample_size
+0,K-Means,5,5,0.197520510744845,1.43038776806531,2373.384374182653,True,full dataset
+1,Agglomerative (ward),5,5,0.1611765316427913,1.643720168558508,1944.0839690422,True,full dataset

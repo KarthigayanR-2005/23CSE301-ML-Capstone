@@ -1,0 +1,5 @@
+,algorithm,linkage,k,Silhouette,Davies_Bouldin,Calinski_Harabasz,silhouette_exact,silhouette_sample_size
+0,Agglomerative,ward,3,0.14844065553362162,1.93102107096216,1888.8848747989828,True,full dataset
+1,Agglomerative,complete,3,0.13619690901270184,1.927511376848498,1853.57530611978,True,full dataset
+2,Agglomerative,average,3,0.2525541842986125,1.2788952222624836,1670.854313634901,True,full dataset
+3,Agglomerative,single,3,0.2250102758107535,0.6647753467161517,4.208810030624006,True,full dataset

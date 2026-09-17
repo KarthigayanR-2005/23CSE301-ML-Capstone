@@ -1,0 +1,62 @@
+{
+  "mode": "full",
+  "track": "classification",
+  "elapsed_seconds": 272.3,
+  "finished": "2026-09-17T05:43:27",
+  "log": [
+    {
+      "time": "2026-09-17T05:38:54",
+      "step": "classification.audit",
+      "status": "EXECUTED",
+      "detail": "raw=(10000, 10) target={0: 9661, 1: 339}"
+    },
+    {
+      "time": "2026-09-17T05:38:56",
+      "step": "classification.eda",
+      "status": "EXECUTED",
+      "detail": "jittered scatter + companion box plots"
+    },
+    {
+      "time": "2026-09-17T05:38:56",
+      "step": "classification.baseline",
+      "status": "EXECUTED",
+      "detail": "majority-class accuracy=0.9660"
+    },
+    {
+      "time": "2026-09-17T05:38:58",
+      "step": "classification.partA",
+      "status": "EXECUTED",
+      "detail": "5 models"
+    },
+    {
+      "time": "2026-09-17T05:39:08",
+      "step": "classification.partB",
+      "status": "EXECUTED",
+      "detail": "5 models; consolidated 10-model table"
+    },
+    {
+      "time": "2026-09-17T05:39:50",
+      "step": "classification.cv",
+      "status": "EXECUTED",
+      "detail": "leaders=['B9. Bagging (Decision Tree base)', 'B10. MLP Classifier']"
+    },
+    {
+      "time": "2026-09-17T05:43:26",
+      "step": "classification.tuning",
+      "status": "EXECUTED",
+      "detail": "1/2 improved on CV"
+    },
+    {
+      "time": "2026-09-17T05:43:26",
+      "step": "classification.algorithm_notes",
+      "status": "EXECUTED",
+      "detail": "odds ratios, tree visualisation, KNN distance metrics, importances"
+    },
+    {
+      "time": "2026-09-17T05:43:27",
+      "step": "classification.persist",
+      "status": "EXECUTED",
+      "detail": "saved B9. Bagging (Decision Tree base)"
+    }
+  ]
+}

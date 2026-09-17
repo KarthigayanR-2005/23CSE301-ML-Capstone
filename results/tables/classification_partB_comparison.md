@@ -1,0 +1,7 @@
+|   Rank | Model                            |   Accuracy |   Precision_failure |   Recall_failure |   F1_weighted |   F1_failure |   ROC_AUC | AUC_source    |   Fit_seconds |
+|-------:|:---------------------------------|-----------:|--------------------:|-----------------:|--------------:|-------------:|----------:|:--------------|--------------:|
+|      1 | B9. Bagging (Decision Tree base) |     0.9865 |            0.859649 |         0.720588 |      0.985925 |     0.784    |  0.959818 | predict_proba |         1.699 |
+|      2 | B8. Gradient Boosting Classifier |     0.986  |            0.844828 |         0.720588 |      0.985463 |     0.777778 |  0.967292 | predict_proba |         1.613 |
+|      3 | B10. MLP Classifier              |     0.981  |            0.734375 |         0.691176 |      0.980722 |     0.712121 |  0.9789   | predict_proba |         2.996 |
+|      4 | B6. Random Forest Classifier     |     0.9815 |            0.897436 |         0.514706 |      0.979062 |     0.654206 |  0.970866 | predict_proba |         1.689 |
+|      5 | B7. AdaBoost Classifier          |     0.9725 |            0.740741 |         0.294118 |      0.96671  |     0.421053 |  0.949169 | predict_proba |         0.884 |

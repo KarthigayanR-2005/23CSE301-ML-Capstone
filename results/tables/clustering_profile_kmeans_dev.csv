@@ -1,0 +1,4 @@
+cluster,n_members,pct_of_data,Customer_Age,Months_on_book,Total_Relationship_Count,Credit_Limit,Total_Trans_Amt,Total_Trans_Ct,Avg_Utilization_Ratio
+0,4347,42.92,40.035,30.312,4.135,6759.257,3431.079,61.942,0.319
+1,1317,13.0,45.516,35.309,2.139,15715.74,11738.011,100.032,0.16
+2,4463,44.07,52.692,41.581,3.992,8365.601,3187.614,57.32,0.266

@@ -1,0 +1,4 @@
+|    | algorithm     |   k |   n_repeats_completed |   subsample_frac |   mean_ARI |   std_ARI |   min_ARI | interpretation_status                           |
+|---:|:--------------|----:|----------------------:|-----------------:|-----------:|----------:|----------:|:------------------------------------------------|
+|  0 | kmeans        |   3 |                     5 |              0.8 |   0.877328 | 0.0907329 |  0.744249 | SUPPLEMENTARY - not supervised cross-validation |
+|  1 | agglomerative |   3 |                     5 |              0.8 |   0.18948  | 0.0407849 |  0.136086 | SUPPLEMENTARY - not supervised cross-validation |

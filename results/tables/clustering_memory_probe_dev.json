@@ -1,0 +1,7 @@
+{
+  "n_rows": 10127,
+  "pairwise_matrix_GB": 0.764,
+  "available_RAM_GB": 3.38,
+  "feasible": true,
+  "note": "scipy/sklearn need roughly 2-3x the bare matrix during linkage"
+}

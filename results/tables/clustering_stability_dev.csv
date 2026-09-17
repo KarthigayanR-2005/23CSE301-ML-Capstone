@@ -1,0 +1,3 @@
+,algorithm,k,n_repeats_completed,subsample_frac,mean_ARI,std_ARI,min_ARI,interpretation_status
+0,kmeans,3,5,0.8,0.8773281265966476,0.09073291434587347,0.7442485117841517,SUPPLEMENTARY - not supervised cross-validation
+1,agglomerative,3,5,0.8,0.1894797457911001,0.0407849249583153,0.13608646688411974,SUPPLEMENTARY - not supervised cross-validation
