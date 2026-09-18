@@ -9,7 +9,7 @@ Rules enforced here:
 """
 from __future__ import annotations
 
-import resource
+import os
 
 import numpy as np
 import pandas as pd
@@ -35,11 +35,19 @@ def memory_probe(n_rows: int) -> dict:
     n x n float64 distance structure: 8 * n^2 bytes.
     """
     pair_bytes = 8 * n_rows ** 2
+
+    # Available RAM, portably. os.sysconf is POSIX-only (absent on Windows),
+    # so psutil is tried first and everything degrades to "unknown" rather
+    # than crashing.
+    avail = None
     try:
-        import os
-        avail = os.sysconf("SC_AVPHYS_PAGES") * os.sysconf("SC_PAGE_SIZE")
+        import psutil
+        avail = psutil.virtual_memory().available
     except Exception:
-        avail = None
+        try:
+            avail = os.sysconf("SC_AVPHYS_PAGES") * os.sysconf("SC_PAGE_SIZE")
+        except (AttributeError, ValueError, OSError):
+            avail = None
     est_gb = pair_bytes / 1024 ** 3
     return {
         "n_rows": n_rows,
